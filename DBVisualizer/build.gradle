@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    compile([group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.4.2']) {
+        exclude module: 'spring-boot-starter-tomcat'
+    }
+    compile([group: 'org.springframework.boot', name: 'spring-boot-starter-jetty', version: '2.4.2'])
+    implementation group: 'javax.servlet.jsp.jstl', name: 'jstl-api', version: '1.2'
+    implementation group: 'taglibs', name: 'standard', version: '1.1.2'
+    compile([group: 'org.eclipse.jetty', name: 'apache-jsp', version: '9.4.0.M1'])
+    implementation 'com.auth0:java-jwt:3.14.0'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:2.4.4"
+    implementation 'org.apache.tomcat:tomcat-jdbc:9.0.41'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+    compile([group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.4.2']) {
+        exclude module: 'HikariCP'
+    }
+}
+test {
+    useJUnitPlatform()
+}

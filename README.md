@@ -49,19 +49,19 @@
 
 ### Implementation
 * SignUp Controller
-  * Inserts a user in the user table keeping the isAdmin value false by default.
+  - Inserts a user in the user table keeping the isAdmin value false by default.
 * Login Controller
-  * Gets a user object from the servlet and sets a cookie for a session and authenticates the user.
+  - Gets a user object from the servlet and sets a cookie for a session and authenticates the user.
 * Home Controller
-  * Gets all the table names from the database and sends it to the jsp.
+  - Gets all the table names from the database and sends it to the jsp.
 * Table Controller
-  * Gets the control when a table name is clicked upon and extracts the table name and finds if the table is accessible to the current user.
-  * Gives the control back to user to execute a query is table is accessible or return unatuthorised if not.
-  * Executes the query given by the user and returns the data received in the form of a table object and is displayed on the screen in the form of <table> tag.
+  - Gets the control when a table name is clicked upon and extracts the table name and finds if the table is accessible to the current user.
+  - Gives the control back to user to execute a query is table is accessible or return unatuthorised if not.
+  - Executes the query given by the user and returns the data received in the form of a table object and is displayed on the screen in a ***table*** tag.
 * QueryBuilder
-  * Takes variables like select, from, where, limit etc and builds a query in sql syntax.
+  - Takes variables like select, from, where, limit etc and builds a query in sql syntax.
 * SQL Handler
-  * Executes queries and creates objects like user, table, row etc.
+  - Executes queries and creates objects like user, table, row etc.
 
 ### In Development Phase
 * Mongo Query Builder

@@ -1,4 +1,4 @@
-# DBVisualizer
+# DataVista (A DataBase Visualizer)
 
 ## A Web App for users to execute and visulaize their database queries.
 
